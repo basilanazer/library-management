@@ -1,0 +1,168 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Login Page Styles */
+.login-container {
+    width: 400px;               /* Container width */
+    margin: 100px auto;        /* Center container */
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 95%;                 /* Make inputs narrower for centering */
+    padding: 10px;
+    margin: 10px auto;         /* Center horizontally */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;            /* Ensure it behaves as a block element */
+}
+
+.login-container button {
+    width: 100%;                 /* Make button narrower for centering */
+    padding: 10px;
+    margin: 10px auto;         /* Center horizontally */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;            /* Ensure it behaves as a block element */
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Dashboard Navigation */
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.navbar .active {
+    background-color: #4CAF50; /* Highlight color for active link */
+    color: white;
+}
+.navbar .logout {
+    float: right;
+}
+
+/* Search Input Styles */
+#searchInput {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    padding: 10px;
+}
+
+/* Tables */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Buttons inside tables */
+table a {
+    padding: 5px 10px;
+    background-color: #28a745;
+    border-radius: 5px;
+    color: white;
+    transition: background 0.3s;
+}
+
+table a:hover {
+    background-color: #218838;
+}
+
+/* Logout Button */
+.header {
+    display: flex;                        /* Enable Flexbox layout */
+    justify-content: space-between;       /* Space between items */
+    align-items: center;                  /* Align items vertically in the center */
+    padding: 20px;                        /* Add some padding around the header */
+    margin-left: 30px;                    /* Margin for left side */
+    margin-right: 30px;                   /* Margin for right side */
+    border-bottom: 1px solid #ddd;        /* Border for visual separation */
+    position: relative;                    /* Position relative for absolute positioning of the welcome */
+}
+
+.welcome {                                /* Styling for the welcome message */
+    position: absolute;                    /* Absolute positioning to allow centering */
+    left: 50%;                            /* Move left to center */
+    transform: translateX(-50%);          /* Adjust back to center */
+    color: #007bff;                       /* Text color for welcome message */
+    /* font-size: 18px;                      Optional: adjust font size */
+}
+
+.logout {
+    background-color: #ff4747;            /* Background color for logout button */
+    color: white;                         /* Text color for logout button */
+    padding: 10px 15px;                   /* Padding for logout button */
+    border: none;                         /* Remove border */
+    border-radius: 5px;                   /* Rounded corners */
+    text-decoration: none;                 /* Remove underline from link */
+    transition: background 0.3s;          /* Smooth transition for hover effect */
+}
+
+.logout:hover {
+    background-color: #cb0000;             /* Darker background on hover */
+}
