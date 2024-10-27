@@ -49,7 +49,7 @@ $username = $_SESSION['username'];
                     <td>{$loan['title']}</td>
                     <td>{$loan['borrowed_date']}</td>
                     <td>{$loan['return_date']}</td>
-                    <td><a href='../actions/mark_returned.php?id={$loan['id']}'>Mark as Returned</a></td>
+                    <td><a href='../actions/return.php?id={$loan['id']}'>Mark as Returned</a></td>
                   </tr>";
         }
         echo "</table>";
