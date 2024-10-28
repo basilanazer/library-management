@@ -133,6 +133,12 @@ table a:hover {
     background-color: #218838;
 }
 
+table :disabled{
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
 /* Logout Button */
 .header {
     display: flex;                        /* Enable Flexbox layout */
