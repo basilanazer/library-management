@@ -13,6 +13,7 @@ $username = $_SESSION['username']; // Get the username for welcome message
     <meta charset="UTF-8">
     <title>User Dashboard</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/search.js"></script> <!-- External JS file -->
 </head>
 <body>
     <div class="header">
@@ -22,12 +23,16 @@ $username = $_SESSION['username']; // Get the username for welcome message
     </div>
     
     <h3>Available Books</h3>
-    <table>
+    <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Search for titles or authors..." 
+           style="width: 80%; margin: 20px auto; display: block; padding: 10px;">
+    
+    <table id="booksTable">
         <tr><th>ID</th><th>Title</th><th>Author</th><th>Available Copies</th><th>Action</th></tr>
         <?php
         $books = $conn->query("SELECT * FROM books");
         while ($book = $books->fetch_assoc()) {
             $loan = $conn->query("SELECT * FROM loans WHERE user_id = $user_id AND book_id = {$book['id']} AND returned = 0");
+
             if ($loan->num_rows > 0) {
                 $loan_data = $loan->fetch_assoc();
                 echo "<tr>
